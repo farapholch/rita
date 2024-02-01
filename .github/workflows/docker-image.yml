@@ -1,5 +1,4 @@
-name: Docker Image CI
-
+name: BuildExcalidraw
 on:
   push:
     branches: [ "fork" ]
