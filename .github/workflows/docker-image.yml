@@ -1,23 +1,28 @@
 name: BuildExcalidraw
+#on:
+#  push:
+#    branches: [ "fork" ]
+#  pull_request:
+#    branches: [ "fork" ]
+#  release:
+#    types: [published]
+
+#jobs:
+
+ # build:
+
+ #   runs-on: ubuntu-latest
+
+ #   steps:
+ #   - uses: actions/checkout@v3
+ #   - name: Build the Docker image
+ #     run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
 on:
-  push:
-    branches: [ "fork" ]
-  pull_request:
-    branches: [ "fork" ]
   release:
     types: [published]
 
 jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
