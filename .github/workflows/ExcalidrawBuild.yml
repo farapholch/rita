@@ -1,7 +1,11 @@
 name: ExcalidrawBuild
 
 on:
-  workflow_dispatch
+  push:
+    tags:
+      - "*"
+#on:
+#  workflow_dispatch
   #release:
   #  types: [published]
   #workflow_dispatch
