@@ -57,10 +57,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Excalidraw",
+        title: "Rita",
         logo: {
-          alt: "Excalidraw Logo",
-          src: "img/logo.svg",
+          alt: "Trv Logo",
+          src: "img/logo.png",
         },
         items: [
           {
