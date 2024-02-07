@@ -13,11 +13,7 @@ export const AppFooter = React.memo(() => {
           gap: ".5rem",
           alignItems: "center",
         }}
-      >
-        {isExcalidrawPlusSignedUser ? (
-          <ExcalidrawPlusAppLink />
-        ) : (
-        )}
+      >        
       </div>
     </Footer>
   );
