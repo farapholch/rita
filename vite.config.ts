@@ -98,10 +98,10 @@ export default defineConfig({
         ],
       },
       manifest: {
-        short_name: "Excalidraw",
-        name: "Excalidraw",
+        short_name: "Rita",
+        name: "Rita",
         description:
-          "Excalidraw is a whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.",
+          "Rita - Samarbete whiteboard",
         icons: [
           {
             src: "logo_notext.png",
@@ -109,7 +109,7 @@ export default defineConfig({
             type: "image/png",
           },
           {
-            src: "apple-touch-icon.png",
+            src: "logo_notext.png",
             type: "image/png",
             sizes: "180x180",
           },
