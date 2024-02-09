@@ -1,4 +1,4 @@
-name: ExcalidrawBuild
+name: RitaBuild
 
 on:
   push:
