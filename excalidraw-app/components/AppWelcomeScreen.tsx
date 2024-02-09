@@ -43,7 +43,7 @@ export const AppWelcomeScreen: React.FC<{
       <WelcomeScreen.Hints.ToolbarHint />
       <WelcomeScreen.Hints.HelpHint />
       <WelcomeScreen.Center>
-        <img src="TV_logo_Horisontal_pos_RGB.png" alt="Trv_Logo" />
+        <img src="TV_Logo_Red.png" alt="Trv_Logo" width={450} height={95}/>
         <WelcomeScreen.Center.Menu>
           <WelcomeScreen.Center.MenuItemLoadScene />
           <WelcomeScreen.Center.MenuItemHelp />
