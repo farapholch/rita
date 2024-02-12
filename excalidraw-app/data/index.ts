@@ -77,7 +77,7 @@ export const getCollabServer = async (): Promise<{
 
   try {
     const resp = await fetch(
-      `${import.meta.env.VITE_APP_PORTAL_URL}`,
+      `${import.meta.env.VITE_APP_PORTAL_URL}/collab-server`,
     );
     return await resp.json();
   } catch (error) {
