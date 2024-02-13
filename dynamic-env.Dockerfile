@@ -14,21 +14,7 @@ RUN yarn build:app:docker
 
 FROM nginx:1.21-alpine
 
-ARG CHINA_MIRROR=false
-
-# enable china mirror
-RUN if [[ "$CHINA_MIRROR" = "true" ]] ; then \
-    echo "Enable China Alpine Mirror" && \
-    sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories; \
-    fi
-
 RUN apk update && apk add sed bash python3 py3-pip
-
-# enable china mirror
-RUN if [[ "$CHINA_MIRROR" = "true" ]] ; then \
-    echo "Enable China NPM Mirror" && \
-    pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple; \
-    fi
 
 RUN pip3 install beautifulsoup4
 
