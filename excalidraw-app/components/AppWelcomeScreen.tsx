@@ -18,15 +18,6 @@ export const AppWelcomeScreen: React.FC<{
       .map((bit, idx) => {
         if (bit === "Excalidraw+") {
           return (
-            <a
-              style={{ pointerEvents: POINTER_EVENTS.inheritFromUI }}
-              href={`${
-                import.meta.env.VITE_APP_PLUS_APP
-              }?utm_source=excalidraw&utm_medium=app&utm_content=welcomeScreenSignedInUser`}
-              key={idx}
-            >
-              Excalidraw+
-            </a>
           );
         }
         return bit;
