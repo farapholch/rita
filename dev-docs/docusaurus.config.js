@@ -15,8 +15,8 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.png",
-  organizationName: "Excalidraw", // Usually your GitHub org/user name.
+  favicon: "img/favicon.ico",
+  organizationName: "Rita", // Usually your GitHub org/user name.
   projectName: "excalidraw", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -57,10 +57,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Excalidraw",
+        title: "Rita",
         logo: {
-          alt: "Excalidraw Logo",
-          src: "img/logo.svg",
+          alt: "Trv Logo",
+          src: "img/logo.png",
         },
         items: [
           {
