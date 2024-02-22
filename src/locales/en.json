@@ -507,7 +507,7 @@
   "mermaid": {
     "title": "Mermaid to Rita",
     "button": "Insert",
-    "description": "Currently only <flowchartLink>Flowcharts</flowchartLink> and <sequenceLink>Sequence Diagrams</sequenceLink> are supported. The other types will be rendered as image in Excalidraw.",
+    "description": "Currently only <flowchartLink>Flowcharts</flowchartLink> and <sequenceLink>Sequence Diagrams</sequenceLink> are supported. The other types will be rendered as image in Rita.",
     "syntax": "Mermaid Syntax",
     "preview": "Preview"
   }
