@@ -1,8 +1,6 @@
 import React from "react";
-import { PlusPromoIcon } from "../../src/components/icons";
 import { useI18n } from "../../src/i18n";
 import { WelcomeScreen } from "../../src/packages/excalidraw/index";
-import { isExcalidrawPlusSignedUser } from "../app_constants";
 import { POINTER_EVENTS } from "../../src/constants";
 
 export const AppWelcomeScreen: React.FC<{
