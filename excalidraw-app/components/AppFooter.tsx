@@ -1,8 +1,5 @@
 import React from "react";
 import { Footer } from "../../src/packages/excalidraw/index";
-import { EncryptedIcon } from "./EncryptedIcon";
-import { ExcalidrawPlusAppLink } from "./ExcalidrawPlusAppLink";
-import { isExcalidrawPlusSignedUser } from "../app_constants";
 
 export const AppFooter = React.memo(() => {
   return (
@@ -13,8 +10,7 @@ export const AppFooter = React.memo(() => {
           gap: ".5rem",
           alignItems: "center",
         }}
-      >       
-      </div>
+      ></div>
     </Footer>
   );
 });
