@@ -20,8 +20,8 @@ RUN pip3 install beautifulsoup4
 
 # env from upstream .env.production
 
-#ENV VITE_APP_BACKEND_V2_GET_URL=https://json.excalidraw.com/api/v2/
-#ENV VITE_APP_BACKEND_V2_POST_URL=https://json.excalidraw.com/api/v2/post/
+ENV VITE_APP_BACKEND_V2_GET_URL=https://json.excalidraw.com/api/v2/scenes/
+ENV VITE_APP_BACKEND_V2_POST_URL=https://json.excalidraw.com/api/v2/scenes/
 ENV VITE_APP_LIBRARY_URL=https://libraries.excalidraw.com
 ENV VITE_APP_LIBRARY_BACKEND=https://us-central1-excalidraw-room-persistence.cloudfunctions.net/libraries
 ENV VITE_APP_PORTAL_URL=https://portal.excalidraw.com
