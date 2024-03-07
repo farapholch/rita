@@ -12,7 +12,7 @@ COPY . .
 RUN sed -i 's/import.meta.env/window._env_/g' $(grep 'import.meta.env' -R -l --include "*.ts" --include "*.tsx" --exclude-dir node_modules .)
 RUN yarn build:app:docker
 
-FROM nginx:1.21-alpine
+FROM nginxinc/nginx-unprivileged:1.25.3-alpine-slim
 
 RUN apk update && apk add sed bash python3 py3-pip
 
@@ -34,7 +34,7 @@ ENV VITE_APP_DISABLE_TRACKING=""
 COPY --from=build /opt/node_app/build /usr/share/nginx/html
 COPY launcher.py /
 
-HEALTHCHECK CMD wget -q -O /dev/null http://localhost || exit 1
-EXPOSE 80
+HEALTHCHECK CMD wget -q -O /dev/null http://localhost:8080 || exit 1
+EXPOSE 8080
 
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
