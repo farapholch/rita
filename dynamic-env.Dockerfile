@@ -1,5 +1,5 @@
+
 FROM node:18 AS build
-USER root
 
 WORKDIR /opt/node_app
 
@@ -16,7 +16,7 @@ RUN yarn build:app:docker
 FROM nginxinc/nginx-unprivileged:1.25.3-alpine-slim
 
 RUN apk update && apk add sed bash python3 py3-pip
-
+USER root
 RUN pip3 install beautifulsoup4
 
 # env from upstream .env.production
