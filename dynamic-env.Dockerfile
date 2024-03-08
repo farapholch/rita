@@ -1,4 +1,5 @@
 FROM node:18 AS build
+USER root
 
 WORKDIR /opt/node_app
 
