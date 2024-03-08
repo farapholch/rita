@@ -13,11 +13,10 @@ RUN sed -i 's/import.meta.env/window._env_/g' $(grep 'import.meta.env' -R -l --i
 RUN yarn build:app:docker
 
 FROM nginxinc/nginx-unprivileged:1.25.4-alpine-slim
-#RUN apk upgrade --no-cache
 
-#RUN apk update
+USER root
 
-RUN apk add sed bash python3 py3-pip
+RUN apk update && apk add sed bash python3 py3-pip
 
 RUN pip3 install beautifulsoup4
 
