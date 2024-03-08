@@ -17,7 +17,8 @@ FROM nginxinc/nginx-unprivileged:1.25.4-alpine-slim
 #RUN apk upgrade --no-cache
 
 #RUN apk update
-#&& apk add sed bash python3 py3-pip
+
+RUN apk add sed bash python3 py3-pip
 
 RUN pip3 install beautifulsoup4
 
