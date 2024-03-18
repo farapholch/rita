@@ -36,7 +36,7 @@ ENV VITE_APP_DISABLE_TRACKING=""
 COPY --from=build /opt/node_app/build /usr/share/nginx/html
 COPY launcher.py /
 
-HEALTHCHECK CMD wget -q -O /dev/null http://localhost || exit 1
-EXPOSE 80
+HEALTHCHECK CMD wget -q -O /dev/null http://localhost:8080 || exit 1
+EXPOSE 8080
 
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
