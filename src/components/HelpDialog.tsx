@@ -228,11 +228,11 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
           >
             <Shortcut
               label={t("buttons.zoomIn")}
-              shortcuts={[getShortcutKey("CtrlOrCmd++")]}
+              shortcuts={[getShortcutKey("CtrlOrCmd+´")]}
             />
             <Shortcut
               label={t("buttons.zoomOut")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+-")]}
+              shortcuts={[getShortcutKey("CtrlOrCmd++")]}
             />
             <Shortcut
               label={t("buttons.resetZoom")}
@@ -264,7 +264,7 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
             />
             <Shortcut
               label={t("labels.showGrid")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+'")]}
+              shortcuts={[getShortcutKey("CtrlOrCmd+Ä")]}
             />
             <Shortcut
               label={t("labels.viewMode")}
@@ -276,7 +276,7 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
             />
             <Shortcut
               label={t("stats.title")}
-              shortcuts={[getShortcutKey("Alt+/")]}
+              shortcuts={[getShortcutKey("Alt+-")]}
             />
           </ShortcutIsland>
           <ShortcutIsland
@@ -340,52 +340,44 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
               />
             )}
             <Shortcut
-              label={t("labels.copyStyles")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Alt+C")]}
-            />
-            <Shortcut
-              label={t("labels.pasteStyles")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Alt+V")]}
-            />
-            <Shortcut
               label={t("labels.sendToBack")}
               shortcuts={[
                 isDarwin
-                  ? getShortcutKey("CtrlOrCmd+Alt+[")
-                  : getShortcutKey("CtrlOrCmd+Shift+["),
+                  ? getShortcutKey("CtrlOrCmd+Alt+Å")
+                  : getShortcutKey("CtrlOrCmd+Shift+Å"),
               ]}
             />
             <Shortcut
               label={t("labels.bringToFront")}
               shortcuts={[
                 isDarwin
-                  ? getShortcutKey("CtrlOrCmd+Alt+]")
-                  : getShortcutKey("CtrlOrCmd+Shift+]"),
+                  ? getShortcutKey("CtrlOrCmd+Alt+¨")
+                  : getShortcutKey("CtrlOrCmd+Shift+¨"),
               ]}
             />
             <Shortcut
               label={t("labels.sendBackward")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+[")]}
+              shortcuts={[getShortcutKey("CtrlOrCmd+Å")]}
             />
             <Shortcut
               label={t("labels.bringForward")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+]")]}
+              shortcuts={[getShortcutKey("CtrlOrCmd+¨")]}
             />
             <Shortcut
               label={t("labels.alignTop")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Shift+Up")]}
+              shortcuts={[getShortcutKey("Up")]}
             />
             <Shortcut
               label={t("labels.alignBottom")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Shift+Down")]}
+              shortcuts={[getShortcutKey("Down")]}
             />
             <Shortcut
               label={t("labels.alignLeft")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Shift+Left")]}
+              shortcuts={[getShortcutKey("Left")]}
             />
             <Shortcut
               label={t("labels.alignRight")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Shift+Right")]}
+              shortcuts={[getShortcutKey("Right")]}
             />
             <Shortcut
               label={t("labels.duplicateSelection")}
@@ -436,10 +428,6 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
             <Shortcut
               label={t("labels.showBackground")}
               shortcuts={[getShortcutKey("G")]}
-            />
-            <Shortcut
-              label={t("labels.decreaseFontSize")}
-              shortcuts={[getShortcutKey("CtrlOrCmd+Shift+<")]}
             />
             <Shortcut
               label={t("labels.increaseFontSize")}
