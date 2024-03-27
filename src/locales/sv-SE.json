@@ -14,7 +14,7 @@
     "bringForward": "Flytta framåt",
     "sendToBack": "Flytta underst",
     "bringToFront": "Flytta främst",
-    "sendBackward": "Skicka bakåt",
+    "sendBackward": "Skicka bakågent",
     "delete": "Ta bort",
     "copyStyles": "Kopiera stil",
     "pasteStyles": "Klistra in stil",
@@ -458,7 +458,7 @@
       "menuHint": "Exportera, inställningar och mer...",
       "center_heading": "Förenklade. Diagram.",
       "toolbarHint": "Välj ett verktyg & börja rita!",
-      "helpHint": "Genvägar & hjälp"
+      "helpHint": "Genvägar & tips och trix för Rita!"
     }
   },
   "colorPicker": {
