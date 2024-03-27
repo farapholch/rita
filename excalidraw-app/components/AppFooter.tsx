@@ -12,7 +12,7 @@ export const AppFooter = React.memo(() => {
         }}
       ></div>
       <a href="https://wiki.trafikverket.local/display/TAOS/Rita+info">
-        <img src="favicon-32x32.png" alt="Trv_Logo" width={32} height={32} />
+        <img src="favicon-32x32.png" alt="Trv_Logo" width={32} height={32} title="Hjälp med Rita" />
       </a>
     </Footer>
   );
