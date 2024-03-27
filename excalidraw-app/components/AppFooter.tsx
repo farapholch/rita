@@ -11,6 +11,9 @@ export const AppFooter = React.memo(() => {
           alignItems: "center",
         }}
       ></div>
+      <a href="https://wiki.trafikverket.local/display/TAOS/Rita+info">
+        <img src="favicon-32x32.png" alt="Trv_Logo" width={32} height={32} />
+      </a>
     </Footer>
   );
 });
