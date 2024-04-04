@@ -23,4 +23,4 @@ jobs:
           context: .
           file: dynamic-env.Dockerfile
           push: true
-          tags: ponchoe/alingexcali:${{ github.ref_name }}
+          tags: ponchoe/excalidraw:${{ github.ref_name }}
