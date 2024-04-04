@@ -21,5 +21,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          file: dynamic-env.Dockerfile
           push: true
-          tags: excalidraw/excalidraw:latest
+          tags: ponchoe/aling:${{ github.ref_name }}
