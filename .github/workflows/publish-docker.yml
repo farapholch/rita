@@ -3,7 +3,7 @@ name: Publish Docker
 on:
   push:
     branches:
-      - release
+      - "*"
 
 jobs:
   publish-docker:
