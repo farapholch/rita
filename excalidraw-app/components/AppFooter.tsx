@@ -9,8 +9,11 @@ export const AppFooter = React.memo(() => {
           display: "flex",
           gap: ".5rem",
           alignItems: "center",
+          margin: ".50rem",
         }}
-      ></div>
+      >
+        TESTMILJÖ
+      </div>
       <a href="https://wiki.trafikverket.local/display/TAOS/Rita+informationssida">
         <img src="TV_logo_symbol_rgb_rod.png" alt="Trv_Logo" width={22} height={32} title="Hjälp med Rita" />
       </a>
