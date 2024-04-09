@@ -12,7 +12,7 @@ COPY . .
 RUN sed -i 's/import.meta.env/window._env_/g' $(grep 'import.meta.env' -R -l --include "*.ts" --include "*.tsx" --exclude-dir node_modules .)
 RUN yarn build:app:docker
 
-FROM nginxinc/nginx-unprivileged:latest
+FROM nginxinc/nginx-unprivileged:1.25.4-alpine
 
 USER root
 
