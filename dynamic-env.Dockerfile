@@ -12,7 +12,7 @@ COPY . .
 RUN sed -i 's/import.meta.env/window._env_/g' $(grep 'import.meta.env' -R -l --include "*.ts" --include "*.tsx" --exclude-dir node_modules .)
 RUN yarn build:app:docker
 
-FROM nginxinc/nginx-unprivileged:1.25.4-alpine-slim
+FROM redhat/ubi9-minimal:latest
 
 USER root
 
@@ -36,7 +36,7 @@ ENV VITE_APP_DISABLE_TRACKING=""
 COPY --from=build /opt/node_app/build /usr/share/nginx/html
 COPY launcher.py /
 
-HEALTHCHECK CMD wget -q -O /dev/null http://localhost:8080 || exit 1
-EXPOSE 8080
+HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
+EXPOSE 80
 
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
