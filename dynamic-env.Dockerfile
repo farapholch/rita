@@ -12,7 +12,12 @@ COPY . .
 RUN sed -i 's/import.meta.env/window._env_/g' $(grep 'import.meta.env' -R -l --include "*.ts" --include "*.tsx" --exclude-dir node_modules .)
 RUN yarn build:app:docker
 
-FROM redhat/ubi9:latest
+FROM redhat/ubi9-micro:latest
+
+RUN microdnf install -y python3
+WORKDIR /app
+COPY ./requirements.txt ./app ./
+RUN python3 -m pip install -r /app/requirements.txt
 
 RUN apk update && apk add sed bash python3 py3-pip
 
