@@ -14,10 +14,7 @@ RUN yarn build:app:docker
 
 FROM redhat/ubi9-micro:latest
 
-RUN microdnf install -y python3
-WORKDIR /app
-COPY ./requirements.txt ./app ./
-RUN python3 -m pip install -r /app/requirements.txt
+RUN apk add --no-cache python3 py3-pip
 
 RUN apk update && apk add sed bash python3 py3-pip
 
