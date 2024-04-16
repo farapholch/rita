@@ -14,7 +14,6 @@ RUN yarn build:app:docker
 
 FROM redhat/ubi9-minimal:latest
 
-RUN apk update
 RUN apk add sed bash python 3 py-pip
 
 RUN pip3 install beautifulsoup4
