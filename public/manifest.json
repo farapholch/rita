@@ -1,7 +1,7 @@
 {
-  "short_name": "Excalidraw",
-  "name": "Excalidraw",
-  "description": "Excalidraw is a whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.",
+  "short_name": "Rita",
+  "name": "Rita",
+  "description": "Rita är en enkel digital whiteboard",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
