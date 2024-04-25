@@ -35,13 +35,14 @@ ENV VITE_APP_DISABLE_TRACKING=""
 
 COPY --from=build /opt/node_app/build /usr/share/nginx/html
 
-# Adjust nginx conf-file
+# Adjust nginx conf-file with metrics value
 RUN rm /etc/nginx/conf.d/default.conf
-COPY --from=build /opt/node_app /etc/nginx/conf.d/default.conf
+COPY --from=build /opt/node_app/nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
 EXPOSE 80
 
+# Run excali
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
