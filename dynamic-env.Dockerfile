@@ -37,7 +37,7 @@ COPY --from=build /opt/node_app/build /usr/share/nginx/html
 
 # Adjust nginx conf-file
 RUN rm /etc/nginx/conf.d/default.conf
-COPY --from=build /opt/node_app conf /etc/nginx
+COPY --from=build /opt/node_app /etc/nginx/conf.d/default.conf
 
 COPY launcher.py /
 
