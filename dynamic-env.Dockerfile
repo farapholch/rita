@@ -34,6 +34,11 @@ ENV VITE_APP_FIREBASE_CONFIG='{"apiKey":"AIzaSyAd15pYlMci_xIp9ko6wkEsDzAAA0Dn0RU
 ENV VITE_APP_DISABLE_TRACKING=""
 
 COPY --from=build /opt/node_app/build /usr/share/nginx/html
+
+# Adjust nginx conf-file
+RUN rm /etc/nginx/conf.d/default.conf
+COPY --from=build /opt/node_app conf /etc/nginx
+
 COPY launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
