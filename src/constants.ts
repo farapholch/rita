@@ -17,7 +17,7 @@ export const isSafari =
 export const isBrave = () =>
   (navigator as any).brave?.isBrave?.name === "isBrave";
 
-export const APP_NAME = "Rita - Samarbeta whiteboard";
+export const APP_NAME = "Rita - Samarbeta Whiteboard";
 
 export const DRAGGING_THRESHOLD = 10; // px
 export const LINE_CONFIRM_THRESHOLD = 8; // px
