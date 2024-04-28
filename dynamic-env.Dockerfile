@@ -36,8 +36,8 @@ ENV VITE_APP_DISABLE_TRACKING=""
 COPY --from=build /opt/node_app/build /usr/share/nginx/html
 
 # Adjust nginx conf-file with metrics value
-RUN rm /etc/nginx/conf.d/default.conf
-COPY --from=build /opt/node_app/nginx.conf /etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/nginx.conf
+COPY --from=build /opt/node_app/nginx.conf /etc/nginx/nginx.conf
 
 COPY launcher.py /
 
