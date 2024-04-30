@@ -15,5 +15,4 @@
 !vitest.config.ts
 !excalidraw-app
 !launcher.py
-!nginx.conf
 !default.conf
