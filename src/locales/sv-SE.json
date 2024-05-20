@@ -138,7 +138,7 @@
     "hint_emptyPrivateLibrary": "Välj ett objekt på canvasen för att lägga till det här."
   },
   "buttons": {
-    "clearReset": "Återställ canvasen",
+    "clearReset": "Ny canvas",
     "exportJSON": "Exportera till fil",
     "exportImage": "Exportera bild...",
     "export": "Spara till...",
