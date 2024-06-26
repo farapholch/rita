@@ -39,10 +39,10 @@ COPY --from=build /opt/node_app/build /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
 COPY --from=build /opt/node_app/default.conf /etc/nginx/conf.d/default.conf
 
-COPY launcher.py /
+#COPY launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
 EXPOSE 80
 
 # Run excali
-CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
+#CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
