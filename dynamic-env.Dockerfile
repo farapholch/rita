@@ -45,9 +45,13 @@ HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
 EXPOSE 80
 
 # Permission fix
+# Permission fix
 RUN whoami
 RUN chown -R $(whoami) /usr/share/nginx/html
 RUN chmod -R 755 /usr/share/nginx/html
+
+RUN chown -R $(whoami) /launcher.py
+RUN chmod -R 755 /launcher.py
 
 # Run excali
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
