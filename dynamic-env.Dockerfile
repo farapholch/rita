@@ -39,19 +39,12 @@ COPY --from=build /opt/node_app/build /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
 COPY --from=build /opt/node_app/default.conf /etc/nginx/conf.d/default.conf
 
-COPY launcher.py /
+# Adjust permissions env
+COPY --from=build --chmod=755 /opt/node_app/src/packages/excalidraw/env.js /usr/share/nginx/html/env.js
+COPY --chmod=755 launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
 EXPOSE 80
-
-# Permission fix
-# Permission fix
-RUN whoami
-RUN chown -R $(whoami) /usr/share/nginx/html
-RUN chmod -R 755 /usr/share/nginx/html
-
-RUN chown -R $(whoami) /launcher.py
-RUN chmod -R 755 /launcher.py
 
 # Run excali
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
