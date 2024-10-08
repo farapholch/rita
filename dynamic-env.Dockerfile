@@ -20,10 +20,6 @@ RUN apk update && apk add sed bash python3 py3-pip
 
 RUN pip3 install beautifulsoup4
 
-# Permission fix
-RUN chown -R $(whoami) /usr/share/nginx/html
-RUN chmod -R 777 /usr/share/nginx/html
-
 # env from upstream .env.production
 
 ENV VITE_APP_BACKEND_V2_GET_URL=https://json.excalidraw.com/api/v2/
@@ -47,6 +43,10 @@ COPY launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
 EXPOSE 80
+
+# Permission fix
+RUN chown -R $(whoami) /usr/share/nginx/html
+RUN chmod -R 755 /usr/share/nginx/html
 
 # Run excali
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
