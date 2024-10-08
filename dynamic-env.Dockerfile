@@ -20,6 +20,10 @@ RUN apk update && apk add sed bash python3 py3-pip
 
 RUN pip3 install beautifulsoup4
 
+# Permission fix
+RUN chown -R $(whoami) /usr/share/nginx/html
+RUN chmod -R 777 /usr/share/nginx/html
+
 # env from upstream .env.production
 
 ENV VITE_APP_BACKEND_V2_GET_URL=https://json.excalidraw.com/api/v2/
