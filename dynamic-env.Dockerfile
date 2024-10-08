@@ -45,6 +45,7 @@ HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
 EXPOSE 80
 
 # Permission fix
+RUN whoami
 RUN chown -R $(whoami) /usr/share/nginx/html
 RUN chmod -R 755 /usr/share/nginx/html
 
