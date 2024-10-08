@@ -47,7 +47,6 @@ EXPOSE 80
 # Permission fix
 RUN chown -R $(whoami) /usr/share/nginx/html
 RUN chmod -R 755 /usr/share/nginx/html
-RUN chown -R $(whoami) /usr/share/nginx/html/env.js
 
 # Run excali
 CMD ["python3", "/launcher.py", "/usr/share/nginx/html"]
