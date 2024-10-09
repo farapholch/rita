@@ -90,7 +90,9 @@ def gen_env_js(root: str):
         code += f"{name}: '{val}',"
     code += "}"
 
-    with open(os.path.join(root, "env.js"), "w") as f:
+    filepath = r"/usr/share/nginx/html/env.js"
+
+    with open(filepath, "w") as f:
         f.write(code)
     return code
 
