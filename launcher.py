@@ -93,7 +93,7 @@ def gen_env_js(root: str):
     filepath = r"/usr/share/nginx/html/env.js"
 
     try:
-        if os.path.exist(filepath):
+        if os.path.exists(filepath):
             with open(filepath, "w") as f:
                 f.write(code)
             return code
