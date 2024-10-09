@@ -94,6 +94,10 @@ def gen_env_js(root: str):
 
     try:
         if os.path.exists(filepath):
+            
+            os.chmod(filepath, 0o666)
+            print("File permissions modified successfully!")
+
             with open(filepath, "w") as f:
                 f.write(code)
             return code
