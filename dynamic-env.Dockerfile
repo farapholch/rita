@@ -41,6 +41,7 @@ COPY --from=build /opt/node_app/default.conf /etc/nginx/conf.d/default.conf
 
 # Adjust permissions env
 COPY --from=build --chmod=755 /opt/node_app/src/packages/excalidraw/env.js /usr/share/nginx/html/env.js
+RUN chown -R $(whoami) /usr/share/nginx/html/env.js
 COPY --chmod=755 launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
