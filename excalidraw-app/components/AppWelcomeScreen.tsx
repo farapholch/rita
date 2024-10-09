@@ -21,7 +21,8 @@ export const AppWelcomeScreen: React.FC<{
         <img src="TV_Logo_Red.png" alt="Trv_Logo" width={450} height={95} />
         <WelcomeScreen.Center.Heading>
           {<h4>Välkommen till Rita - Digital whiteboard på Trafikverket :-)</h4>}
-          OBS! Detta är en testmiljö
+          <h4>OBS! Detta är en testmiljö</h4>
+          <h5>Powered by K8s</h5>
         </WelcomeScreen.Center.Heading>
         <WelcomeScreen.Center.Menu>
           <WelcomeScreen.Center.MenuItemLoadScene />
