@@ -14,7 +14,7 @@ RUN yarn build:app:docker
 
 FROM nginx:1.25.3-alpine
 
-USER root
+#USER root
 
 RUN apk update && apk add sed bash python3 py3-pip
 
@@ -39,9 +39,17 @@ COPY --from=build /opt/node_app/build /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
 COPY --from=build /opt/node_app/default.conf /etc/nginx/conf.d/default.conf
 
+
+RUN chgrp -R 0 /usr/share/nginx/html && \ 
+         chmod -R g=u /usr/share/nginx/html
+#USER 1001
+
+#RUN chown -R 1001:0 /usr/share/nginx/html
+
 # Adjust permissions env
 COPY --from=build --chmod=755 /opt/node_app/src/packages/excalidraw/env.js /usr/share/nginx/html/env.js
 RUN chown -R $(whoami) /usr/share/nginx/html/env.js
+
 COPY --chmod=755 launcher.py /
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:80 || exit 1
