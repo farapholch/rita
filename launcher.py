@@ -92,9 +92,15 @@ def gen_env_js(root: str):
 
     filepath = r"/usr/share/nginx/html/env.js"
 
-    with open(filepath, "w") as f:
-        f.write(code)
-    return code
+    try:
+        if os.path.exist(filepath):
+            with open(filepath, "w") as f:
+                f.write(code)
+            return code
+        else:
+            print ("File not found", filepath)
+    except PermissionError:
+        print("Permission denied: You don't have the necessary permissions to change the permissions of this file.")
 
 
 def patch_index_html(root: str, script: str):
