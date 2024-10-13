@@ -380,7 +380,7 @@ class Collab extends PureComponent<Props, CollabState> {
     existingRoomLinkData: null | { roomId: string; roomKey: string },
   ): Promise<ImportedDataState | null> => {
     if (!this.state.username) {
-      import("@excalidraw/random-username").then(({ getRandomUsername }) => {
+      import("random-username-swedish").then(({ getRandomUsername }) => {
         const username = getRandomUsername();
         this.onUsernameChange(username);
       });
